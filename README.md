@@ -4,6 +4,6 @@ Includes
 ====
 Math.py
 
-- Permutataion
+- Permutation
 
 Song Bo
