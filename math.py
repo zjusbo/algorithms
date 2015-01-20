@@ -8,7 +8,6 @@ def perm(n, m):
 	if m == 1:
 		return [[x] for x in xrange(1, n + 1)]
 	elif n == m:		
-		return [x[0: i] + [m] + x[i: ] for x in perm(n - 1, m - 1) for i in xrange(0, len(x) + 1)]
+		return [x[0: i] + [m] + x[i: ] for x in perm(n - 1, m - 1) for i in xrange(len(x) + 1)]
 	else:
-		return perm(n, m - 1) + [x[0: i] + [m] + x[i: ] for x in perm(n - 1, m - 1) for i in xrange(0, len(x) + 1)]
-
+		return perm(n, m - 1) + [x[0: i] + [m] + x[i: ] for x in perm(n - 1, m - 1) for i in xrange(len(x) + 1)]
